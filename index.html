@@ -22,13 +22,53 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- Custom CSS to fix layout -->
+    <style>
+        .wrapper {
+            display: flex;
+            min-height: 100vh;
+        }
+        .sidebar {
+            width: 250px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            background-color: #343a40;
+            color: #fff;
+            padding: 20px;
+            z-index: 1000;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: calc(100% - 250px);
+        }
+        .navbar-nav .nav-link {
+            color: #fff !important;
+        }
+        .navbar-nav .nav-link i {
+            margin-left: 10px;
+        }
+        @media (max-width: 768px) {
+            .sidebar {
+                width: 100%;
+                position: relative;
+            }
+            .content {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="img/nw.png" alt="Profile picture of Beth Waceke Kimani">
+                <img src="img/nw.png" alt="Profile picture of Beth Waceke Kimani" style="width: 100%; max-width: 200px;">
             </div>
             <div class="sidebar-content">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -82,7 +122,7 @@
                 </div>
             </div>
             <!-- Header End -->
-            
+
             <!-- About Start -->
             <div class="about" id="about">
                 <div class="content-inner">
@@ -91,10 +131,10 @@
                     </div>
                     <div class="row align-items-center">
                         <div class="col-md-6 col-lg-5">
-                            <img src="img/nw.png" alt="About Beth Waceke Kimani">
+                            <img src="img/nw.png" alt="About Beth Waceke Kimani" class="img-fluid">
                         </div>
                         <div class="col-md-6 col-lg-7">
-                            <p>I am an  Full-Stack Engineer with a strong foundation in web development, cybersecurity, and technical support. Proficient in technologies such as React.js, Node.js, Python (Flask), and PHP, I excel in building responsive, secure, and dynamic web applications. With hands-on experience in API development, database integration, and agile collaboration, I am passionate about solving complex technical challenges and delivering innovative solutions.</p>
+                            <p>I am a Full-Stack Engineer with a strong foundation in web development, cybersecurity, and technical support. Proficient in technologies such as React.js, Node.js, Python (Flask), and PHP, I excel in building responsive, secure, and dynamic web applications. With hands-on experience in API development, database integration, and agile collaboration, I am passionate about solving complex technical challenges and delivering innovative solutions.</p>
                             <p>Languages: English, Kiswahili</p>
                             <a class="btn" href="#">Hire Me</a>
                         </div>
@@ -102,14 +142,14 @@
                 </div>
             </div>
             <!-- About End -->
-            
+
             <!-- Education Start -->
             <div class="education" id="education">
                 <div class="content-inner">
                     <div class="content-header">
                         <h2>Education</h2>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="edu-col">
                                 <span>Sep 2021 <i>to</i> Oct 2024</span>
@@ -142,14 +182,14 @@
                 </div>
             </div>
             <!-- Education End -->
-                
+
             <!-- Experience Start -->
             <div class="experience" id="experience">
                 <div class="content-inner">
                     <div class="content-header">
                         <h2>Experience</h2>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="exp-col">
                                 <span>Mar 2025 <i>to</i> Present</span>
@@ -214,24 +254,23 @@
                             </ul>
                         </div>
                         <div class="col-md-6">
-    <h3>Backend & Other Skills</h3>
-    <ul class="list-unstyled">
-        <li>Node.js <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
-        <li>Express Js <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
-        <li>Python (Flask/Django) <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
-        <li>PHP <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
-        <li>RESTful APIs <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
-        <li>MongoDB <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
-        <li>PostgreSQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
-        <li>MySQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
-        <li>SQLite <span class="float-right">75%</span><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></li>
-        <li>TypeScript <span class="float-right">60%</span><div class="progress"><div class="progress-bar" style="width: 60%;"></div></div></li>
-        <li>NestJS <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
-        <li>Web3 <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
-        <li>Mongoose ORM <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
-        <li>Git/GitHub <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
-    </ul>
-</div>
+                            <h3>Backend & Other Skills</h3>
+                            <ul class="list-unstyled">
+                                <li>Node.js <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                                <li>Express Js <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                                <li>Python (Flask/Django) <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
+                                <li>PHP <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
+                                <li>RESTful APIs <span class="float-right">85%</span><div class="progress"><div class="progress-bar" style="width: 85%;"></div></div></li>
+                                <li>MongoDB <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                                <li>PostgreSQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                                <li>MySQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
+                                <li>SQLite <span class="float-right">75%</span><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></li>
+                                <li>TypeScript <span class="float-right">60%</span><div class="progress"><div class="progress-bar" style="width: 60%;"></div></div></li>
+                                <li>NestJS <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+                                <li>Web3 <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+                                <li>Mongoose ORM <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+                                <li>Git/GitHub <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
+                            </ul>
                         </div>
                     </div>
                 </div>
@@ -244,7 +283,7 @@
                     <div class="content-header">
                         <h2>Services</h2>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="srv-col">
                                 <i class="fa fa-desktop"></i>
@@ -359,24 +398,23 @@
                     <div class="content-header">
                         <h2>Reviews</h2>
                     </div>
-                    <div class="row align-items-center review-slider">
+                    <div class="row review-slider">
                         <div class="col-md-12">
                             <div class="review-slider-item">
                                 <div class="review-text">
                                     <p>"She is committed to Learn New Technologies and very innovative."</p>
                                 </div>
                                 <div class="review-img">
-                                    <img src="img/review-1.png" alt="Client Review">
+                                    <img src="img/review-1.png" alt="Client Review" class="img-fluid">
                                     <div class="review-name">
                                         <h3>Bernard Njenga</h3>
-                                        <p>ICS Technical College,ICT Department Supervisor</p>
-                                        <p>Location,Along Moi Avenue opposite Kenya Archives</p>
+                                        <p>ICS Technical College, ICT Department Supervisor</p>
+                                        <p>Location, Along Moi Avenue opposite Kenya Archives</p>
                                         <p>0748846976</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- Add more review items as needed -->
                     </div>
                 </div>
             </div>
@@ -388,13 +426,13 @@
                     <div class="content-header">
                         <h2>Contact</h2>
                     </div>
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6">
                             <div class="contact-info">
-                                <p><i class="fa fa-user"></i>Beth Waceke Kimani</p>
+                                <p><i class="fa fa-user"></i> Beth Waceke Kimani</p>
                                 <p><i class="fa fa-envelope"></i><a href="mailto:kbwaceke@gmail.com">kbwaceke@gmail.com</a></p>
                                 <p><i class="fa fa-phone"></i><a href="tel:+0112280703">+0112280703</a></p>
-                                <p><i class="fa fa-map-marker"></i>Nairobi, Kenya</p>
+                                <p><i class="fa fa-map-marker"></i> Nairobi, Kenya</p>
                                 <div class="social">
                                     <a class="btn" href="https://github.com/bethkimani" target="_blank"><i class="fab fa-github"></i></a>
                                     <a class="btn" href="https://www.linkedin.com/in/beth-kimani/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -426,11 +464,11 @@
                 </div>
             </div>
             <!-- Contact End -->
-            
+
             <!-- Footer Start -->
             <div class="footer">
                 <div class="content-inner">
-                    <div class="row align-items-center">
+                    <div class="row">
                         <div class="col-md-6">
                             <p>© Copyright <a href="#">Beth Waceke Kimani</a>. All Rights Reserved</p>
                         </div>
@@ -443,10 +481,10 @@
             <!-- Footer End -->
         </div>
     </div>
-    
+
     <!-- Back to Top -->
     <a href="#" class="back-to-top"><i class="fa fa-angle-double-up"></i></a>
-    
+
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
@@ -456,7 +494,7 @@
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/isotope/isotope.pkgd.min.js"></script>
     <script src="lib/lightbox/js/lightbox.min.js"></script>
-    
+
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
