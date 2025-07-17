@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <title>Beth Waceke Kimani's Resume</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="Resume of Beth Waceke Kimani" name="keywords">
     <meta content="Resume of Beth Waceke Kimani" name="description">
 
@@ -22,53 +22,13 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
-
-    <!-- Custom CSS to fix layout -->
-    <style>
-        .wrapper {
-            display: flex;
-            min-height: 100vh;
-        }
-        .sidebar {
-            width: 250px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            bottom: 0;
-            background-color: #343a40;
-            color: #fff;
-            padding: 20px;
-            z-index: 1000;
-        }
-        .content {
-            margin-left: 200px;
-            padding: 20px;
-            width: calc(100% - 250px);
-        }
-        .navbar-nav .nav-link {
-            color: #fff !important;
-        }
-        .navbar-nav .nav-link i {
-            margin-left: 10px;
-        }
-        @media (max-width: 768px) {
-            .sidebar {
-                width: 100%;
-                position: relative;
-            }
-            .content {
-                margin-left: 0;
-                width: 100%;
-            }
-        }
-    </style>
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
     <div class="wrapper">
         <div class="sidebar">
             <div class="sidebar-header">
-                <img src="img/nw.png" alt="Profile picture of Beth Waceke Kimani" style="width: 100%; max-width: 200px;">
+                <img src="img/nw.png" alt="Profile picture of Beth Waceke Kimani" class="img-fluid">
             </div>
             <div class="sidebar-content">
                 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
@@ -118,7 +78,7 @@
                     <p>I'm</p>
                     <h1>Beth Waceke Kimani</h1>
                     <h2>Full Stack Engineer</h2>
-                    <div class="typed-text">Web Designer, Web Developer, Front End Developer, Backend Developer, Full Stack Engineer, Software Security Specialist</div>
+                     <div class="typed-text">Web Designer, Web Developer, Front End Developer, Backend Developer, Full Stack Engineer, Software Security Specialist</div>
                 </div>
             </div>
             <!-- Header End -->
@@ -176,7 +136,7 @@
                                 <span>Apr 2025 <i>to</i> Jun 2025</span>
                                 <h3>Certificate in Software Security Specialist</h3>
                                 <p><strong>Cyber Shujaa - Microsoft ADC</strong> | Cybersecurity & Software Security</p>
-                            </div>
+                            </div025>
                         </div>
                     </div>
                 </div>
@@ -230,7 +190,7 @@
                                 <p>Created an online timetable system and lecturer evaluation form using HTML, CSS, PHP, and SQL.</p>
                             </div>
                         </div>
-                    </div>
+                    </Wells>
                 </div>
             </div>
             <!-- Experience End -->
@@ -265,10 +225,10 @@
                                 <li>PostgreSQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
                                 <li>MySQL <span class="float-right">80%</span><div class="progress"><div class="progress-bar" style="width: 80%;"></div></div></li>
                                 <li>SQLite <span class="float-right">75%</span><div class="progress"><div class="progress-bar" style="width: 75%;"></div></div></li>
-                                <li>TypeScript <span class="float-right">60%</span><div class="progress"><div class="progress-bar" style="width: 60%;"></div></div></li>
+                                <li>TypeScript <span class="float-right">60%</span><div class="progress"><div class="progress-bar" style="width:  40%;"></div></div></li>
                                 <li>NestJS <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
-                                <li>Web3 <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
-                                <li>Mongoose ORM <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
+                                
+                                <li>Java <span class="float-right">50%</span><div class="progress"><div class="progress-bar" style="width: 50%;"></div></div></li>
                                 <li>Git/GitHub <span class="float-right">90%</span><div class="progress"><div class="progress-bar" style="width: 90%;"></div></div></li>
                             </ul>
                         </div>
@@ -441,23 +401,21 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form">
-                                <form>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
-                                            <input type="text" class="form-control" placeholder="Your Name" />
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <input type="email" class="form-control" placeholder="Your Email" />
-                                        </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-6">
+                                        <input type="text" class="form-control" placeholder="Your Name" />
                                     </div>
-                                    <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Subject" />
+                                    <div class="form-group col-md-6">
+                                        <input type="email" class="form-control" placeholder="Your Email" />
                                     </div>
-                                    <div class="form-group">
-                                        <textarea class="form-control" rows="5" placeholder="Message"></textarea>
-                                    </div>
-                                    <div><button class="btn" type="submit">Send Message</button></div>
-                                </form>
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" placeholder="Subject" />
+                                </div>
+                                <div class="form-group">
+                                    <textarea class="form-control" rows="5" placeholder="Message"></textarea>
+                                </div>
+                                <div><button class="btn" type="button">Send Message</button></div>
                             </div>
                         </div>
                     </div>
