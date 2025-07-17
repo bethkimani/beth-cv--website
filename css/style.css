@@ -288,9 +288,14 @@ a:focus {
     margin-bottom: 10px;
 }
 
-.header .typed-text {
+.title-carousel {
     font-size: 1.2rem;
     color: #666666;
+}
+
+.title-carousel div {
+    text-align: center;
+    padding: 10px 0;
 }
 
 @media (max-width: 576px) {
@@ -304,7 +309,7 @@ a:focus {
     }
 
     .header h2,
-    .header .typed-text {
+    .title-carousel {
         font-size: 1rem;
     }
 }
@@ -824,7 +829,7 @@ a:focus {
 }
 
 /**********************************/
-/*********** Footer CSS ***********/
+/*********** Footer CSS **********/
 /**********************************/
 .footer {
     padding: 20px 15px;
