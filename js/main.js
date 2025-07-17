@@ -22,7 +22,23 @@
         }
     });
     
-    // Typed Initiate
+    // Title carousel initialization
+    if ($('.title-carousel').length) {
+        $('.title-carousel').slick({
+            autoplay: true,
+            autoplaySpeed: 2000, // 2 seconds per slide
+            speed: 1000, // 1-second transition
+            fade: true, // Fade effect for disappearing
+            cssEase: 'linear', // Smooth fade
+            arrows: false, // No arrows
+            dots: false, // No dots
+            infinite: true, // Loop continuously
+            slidesToShow: 1, // One title at a time
+            slidesToScroll: 1 // Scroll one at a time
+        });
+    }
+    
+    // Typed Initiate (unchanged)
     if ($('.header h2').length == 1) {
         var typed_strings = $('.header .typed-text').text();
         var typed = new Typed('.header h2', {
