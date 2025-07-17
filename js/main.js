@@ -7,17 +7,21 @@
             event.preventDefault();
             
             $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 30
+                scrollTop: $(this.hash).offset().top - 50
             }, 1500, 'easeInOutExpo');
             
             if ($(this).parents('.navbar-nav').length) {
                 $('.navbar-nav .active').removeClass('active');
                 $(this).closest('a').addClass('active');
             }
+
+            // Close navbar on mobile after clicking a link
+            if ($(window).width() < 768) {
+                $('.navbar-collapse').collapse('hide');
+            }
         }
     });
     
-
     // Typed Initiate
     if ($('.header h2').length == 1) {
         var typed_strings = $('.header .typed-text').text();
@@ -30,16 +34,14 @@
         });
     }
     
-    
-    // Skills
+    // Skills animation
     $('.skills').waypoint(function () {
         $('.progress .progress-bar').each(function () {
             $(this).css("width", $(this).attr("aria-valuenow") + '%');
         });
     }, {offset: '80%'});
     
-    
-    // Porfolio isotope and filter
+    // Portfolio isotope and filter
     var portfolioIsotope = $('.portfolio-container').isotope({
         itemSelector: '.portfolio-item',
         layoutMode: 'fitRows'
@@ -52,16 +54,22 @@
         portfolioIsotope.isotope({filter: $(this).data('filter')});
     });
     
-    
     // Review slider
     $('.review-slider').slick({
         autoplay: true,
-        dots: false,
+        dots: true,
         infinite: true,
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    arrows: false
+                }
+            }
+        ]
     });
-    
     
     // Back to top button
     $(window).scroll(function () {
@@ -71,9 +79,9 @@
             $('.back-to-top').fadeOut('slow');
         }
     });
+    
     $('.back-to-top').click(function () {
         $('html, body').animate({scrollTop: 0}, 1500, 'easeInOutExpo');
         return false;
     });
 })(jQuery);
-
