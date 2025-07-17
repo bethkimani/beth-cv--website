@@ -22,31 +22,17 @@
         }
     });
     
-    // Title carousel initialization
-    if ($('.title-carousel').length) {
-        $('.title-carousel').slick({
-            autoplay: true,
-            autoplaySpeed: 2000, // 2 seconds per slide
-            speed: 1000, // 1-second transition
-            fade: true, // Fade effect for disappearing
-            cssEase: 'linear', // Smooth fade
-            arrows: false, // No arrows
-            dots: false, // No dots
-            infinite: true, // Loop continuously
-            slidesToShow: 1, // One title at a time
-            slidesToScroll: 1 // Scroll one at a time
-        });
-    }
-    
-    // Typed Initiate (unchanged)
-    if ($('.header h2').length == 1) {
-        var typed_strings = $('.header .typed-text').text();
+    // Typed Initiate
+    if ($('.header .typed-text').length == 1) {
+        var typed_strings = $('.header .typed-text').text().split(', ');
         var typed = new Typed('.header h2', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
+            strings: typed_strings,
+            typeSpeed: 50, // Speed of typing (ms per character)
+            backSpeed: 20, // Speed of backspacing (ms per character)
+            backDelay: 1000, // Delay before backspacing (1 second)
+            startDelay: 500, // Delay before starting (0.5 second)
+            loop: true, // Loop through all strings
+            smartBackspace: true // Backspace only typed characters
         });
     }
     
