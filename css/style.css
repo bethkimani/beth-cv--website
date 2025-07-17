@@ -63,26 +63,35 @@ a:focus {
 }
 
 .navbar {
-    padding: 10px 0;
+    padding: 0;
     background: #222222 !important;
 }
 
 .navbar-brand {
     color: #ffffff;
     font-size: 1.5rem;
+    padding: 10px 15px;
+    display: block;
 }
 
 .navbar-toggler {
     border: none;
     padding: 5px;
+    margin: 10px 15px;
 }
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28255, 255, 255, 0.5%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
+.navbar-nav {
+    width: 100%;
+    padding: 0;
+}
+
 .navbar-nav .nav-item {
-    border-top: 1px solid rgba(255, 255, 255, .2);
+    width: 100%;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .navbar-nav .nav-item:first-child {
@@ -92,6 +101,10 @@ a:focus {
 .navbar-nav .nav-link {
     color: #ffffff;
     padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
     transition: all .3s;
 }
 
@@ -104,6 +117,7 @@ a:focus {
 .navbar-nav .nav-link:hover,
 .navbar-nav .nav-link.active {
     color: #FF6F61;
+    background: rgba(255, 111, 97, 0.1);
 }
 
 .navbar-nav .nav-link:hover i,
@@ -114,6 +128,7 @@ a:focus {
 .sidebar-footer {
     text-align: center;
     padding: 15px 0;
+    width: 100%;
 }
 
 .sidebar-footer a {
@@ -148,6 +163,7 @@ a:focus {
         overflow-y: auto;
         scrollbar-width: thin;
         scrollbar-color: darkgrey transparent;
+        padding: 20px;
     }
 
     .sidebar::-webkit-scrollbar {
@@ -174,11 +190,12 @@ a:focus {
     }
 
     .navbar {
+        padding: 0;
         flex-direction: column;
     }
 
     .navbar-nav .nav-link {
-        padding: 5px 30px 7px 30px;
+        padding: 10px 30px;
     }
 
     .sidebar-footer {
@@ -807,7 +824,7 @@ a:focus {
 }
 
 /**********************************/
-/*********** Footer CSS **********/
+/*********** Footer CSS ***********/
 /**********************************/
 .footer {
     padding: 20px 15px;
